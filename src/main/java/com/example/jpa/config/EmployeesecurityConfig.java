@@ -61,7 +61,7 @@ public class EmployeesecurityConfig {
                 configurer
                         .requestMatchers(HttpMethod.GET, "/api/employee").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET, "/api/employee/**").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.POST, "/api/employee").hasRole("MANAGER")
+                        .requestMatchers(HttpMethod.POST, "/api/sendemp").hasRole("MANAGER")
                       //  .requestMatchers(HttpMethod.POST, "/api/employee/**").hasRole("MANAGER")
 
                         .requestMatchers(HttpMethod.PUT, "/api/employee/**").hasRole("MANAGER")

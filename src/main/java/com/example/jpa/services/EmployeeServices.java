@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.jpa.emprepo.EmpoyeeRepo;
-import com.example.jpa.entity.Employee;
+import com.example.jpa.entity.Employee1;
 
 @Service
 public class EmployeeServices {
@@ -20,21 +20,21 @@ public class EmployeeServices {
         this.employeerepo = employeerepo;
     }
 
-    public List<Employee> find() {
+    public List<Employee1> find() {
         return employeerepo.findAll();
     }
 
-    public Optional<Employee> findbyid(int id) {
+    public Optional<Employee1> findbyid(int id) {
         return employeerepo.findById(id);
     }
 
     @Transactional
-    public Employee create(Employee emp) {
+    public Employee1 create(Employee1 emp) {
         return employeerepo.save(emp);
     }
 
     @Transactional
-    public void remove(Employee emp) {
+    public void remove(Employee1 emp) {
         employeerepo.delete(emp);
     }
 
